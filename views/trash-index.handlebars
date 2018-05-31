@@ -1,0 +1,111 @@
+        <nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">Home</a>
+</nav>
+            <div class="container">
+
+                <form class="form-inline">
+                        <!--<img src="https://cdn5.f-cdn.com/contestentries/419315/17615651/5758567cad64d_thumb900.jpg" width="30" height="30" class="d-inline-block align-top" alt="">-->
+                        <img class="teamLogo" src="" alt="" width="30" height="30" class="d-inline-block align-top" alt="">
+                        Welcome: Username
+                        <br>
+                        <input id="locationSearch" class="form-control mr-sm-2" type="search" placeholder="Team" aria-label="Search">
+                        <button id="searchButton" class="btn btn-outline-success my-2 my-sm-0" type="submit">Test</button>
+                </form>
+              </a>
+          <button type="button" class="btn btn-outline-primary">Log Out</button>
+            </div>
+  </nav>
+
+  <div class="wrapper">
+    <div class="post-entry">
+            <div class="col-md enter_section">
+            <form action="/posts/create" method="POST">
+             
+                <div class="form-group">
+                    <label for=""><h6>Call out a team!</h6>
+                        <select name="team_name" class="form-control" id="exampleFormControlSelect1 enter_team">
+                            <option type="text" value="">Select a team</option>
+                            <option type="text" value="Browns">Browns</option>
+                            <option type="text" value="Bears">Bears</option>
+                            <option type="text" value="Bengals">Bengals</option>
+                            <option type="text" value="Buccaneers">Buccaneers</option>
+                            <option type="text" value="Cardinals">Cardinals</option>
+                            <option type="text" value="Chargers">Chargers</option>         
+                            <option type="text" value="Dolphins">Dolphins</option>
+                             <option type="text" value="Giants">Giants</option>                           
+                            <option type="text" value="Jets">Jets</option>
+                            <option type="text" value="Lions">Lions</option>
+                            <option type="text" value="Panthers">Panthers</option>
+                            <option type="text" value="Raiders">Raiders</option>
+                            <option type="text" value="Ravens">Ravens</option>
+                            <option type="text" value="Rams">Rams</option>     
+                            <option type="text" value="Redskins">Redskins</option>
+                            <option type="text" value="Seahawks">Seahawks</option>
+                            <option type="text" value="Vikings">Vikings</option>
+                            <option type="text" value="49ers">49ers</option>
+                        </select>
+                    </label>
+                </div>
+                          
+            <div class="form-group">
+                <label for="">
+                    <h6>Enter a Post Title</h6>
+                    <input type="text" class="form-control" name="post_title" id="enter_title">
+                </label><br>
+                <label for="">
+                    <h6>Own your post!</h6>
+                    <input type="text" class="form-control" name="fan_name" id="enter_name" placeholder="Enter your screen name">
+                    </label><br>
+            </div>
+            <div class="input-group mb-3">
+                <label for=""><h6>Enter your Post</h6>
+                <textarea type="text" class="form-control" name="post_content" id="enter_text" rows="6" aria-label="With textarea"></textarea>
+                <button type="submit" class="btn btn-dark btn-block" id="text-enter-button">Submit</button>
+           
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="forum-post">
+        		{{!-- POST AREA --}}
+		<div class="col" class="task">
+            <h3 class="forum-title">Welcome to Trash Talk Central!</h3>
+            </span>
+            <br>
+
+            <h5 class="display-5">Recent Posts</h5>
+			<div class="row post-rows">
+                {{#each post}}
+                {{#unless this.post_it}}
+	    		<table class="table table-bordered">
+                    <tbody>
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col-2">Team</th>                       
+                            <th scope="col-4">Title</th>
+                            <th scope="col-4">Post</th>
+                            <th scope="col=2">Posted by</th>
+                            <th scope="col=2">Posted on</th>
+                        </tr>
+                    </thead>
+                        <tr>
+                            <td scope="col-2">{{this.team_name}}</td>
+                            <td scope="col-2">{{this.post_title}}</td>
+                            <td scope="col-4    ">{{this.post_content}}</td>
+                            <td scope="col-2">{{this.fan_name}}</td>
+                            <td scope="col-2">{{this.createdAt}}</td>
+                        </tr>
+                     </tbody>
+                </table>            
+                
+			{{/unless}}
+			{{/each}}
+			</div>
+		</div>
+    </div>
+</div>
+
+  <br>
+
+

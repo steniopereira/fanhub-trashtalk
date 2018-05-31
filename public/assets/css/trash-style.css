@@ -1,0 +1,155 @@
+body {
+  width: 99%;
+  height: 900px;
+  background-color: white;
+
+}
+
+#top-bar {
+  margin-top: 28px;
+}
+
+.spacing-reset {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.list-reset {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  border: 0;
+}
+
+input.custom-input {
+  width: 80px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 500px;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    width: 600px;
+    
+  }
+}
+
+.enter_section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+#enter_title {
+  width: 300px;
+  /* height: 18px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 16px;
+}
+
+#enter_team {
+  width: 300px;
+  /* height: 18px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 16px;
+}
+
+#enter_name {
+  width: 300px;
+  /* height: 18px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 16px;
+}
+
+#enter_text {
+  width: 300px;
+  height: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: auto;
+  font-size: 16px;
+}
+
+.task {
+  border-color: black;
+  border-style: solid;
+  border-width: 3px;
+}
+
+.button-size {
+  padding-bottom: 20px;
+}
+
+#text-enter-button {
+  margin-top: 10px;
+  margin-bottom: 18px;
+}
+
+h1 {
+  color: #f30;
+}
+
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  padding: 20px;
+  background-color: white;
+  
+  background-image: url("../images/logos/allteams.jpg");
+}
+
+.post-entry {
+  grid-column: 1 / 6;
+  grid-row: 1;
+  border-color: black;
+  border: 1px;
+  border-style: dashed;
+  padding: 5px;
+  background-color: white;
+  opacity: 0.95;
+  filter: alpha(opacity=95);
+  -moz-opacity:0.95;
+}
+
+.forum-post {
+  grid-column: 1 / 5;
+  grid-row: 2;
+  border-color: black;
+  border: 1px;
+  border-style: dashed;
+  padding: 5px;
+  background-color: white;
+  opacity: 0.95;
+  filter: alpha(opacity=95);
+  -moz-opacity:0.95;
+}
+.display-5 {
+ font-style: italic;
+ color: black;
+}
+
+.forum-title{
+  color:crimson;
+}
+ 
+
+footer {
+   
+    height: 100px;
+    padding-top: 25px;
+    padding-bottom: 25px
+}
